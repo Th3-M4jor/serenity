@@ -1001,6 +1001,7 @@
 <span id="998"> 998</span>
 <span id="999"> 999</span>
 <span id="1000">1000</span>
+<span id="1001">1001</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="doccomment">//! A set of utilities to help with common use cases that are not required to</span>
 <span class="doccomment">//! fully use the library.</span>
@@ -1747,6 +1748,7 @@
 }
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
+<span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy</span>::<span class="ident">unwrap_used</span>)]</span>
 <span class="kw">mod</span> <span class="ident">test</span> {
     <span class="kw">use</span> <span class="kw">super</span>::<span class="kw-2">*</span>;
     <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;cache&quot;</span>)]</span>

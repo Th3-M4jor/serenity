@@ -2454,6 +2454,8 @@
 <span id="2451">2451</span>
 <span id="2452">2452</span>
 <span id="2453">2453</span>
+<span id="2454">2454</span>
+<span id="2455">2455</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="doccomment">//! Models relating to guilds and types that it owns.</span>
 
@@ -4892,6 +4894,7 @@
         }
 
         <span class="attribute">#[<span class="ident">tokio</span>::<span class="ident">test</span>]</span>
+        <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy</span>::<span class="ident">unwrap_used</span>)]</span>
         <span class="kw">async</span> <span class="kw">fn</span> <span class="ident">member_named_username</span>() {
             <span class="kw">let</span> <span class="ident">guild</span> <span class="op">=</span> <span class="ident">gen</span>();
             <span class="kw">let</span> <span class="ident">lhs</span> <span class="op">=</span> <span class="ident">guild</span>.<span class="ident">member_named</span>(<span class="string">&quot;test#1432&quot;</span>).<span class="ident">unwrap</span>().<span class="ident">display_name</span>();
@@ -4900,6 +4903,7 @@
         }
 
         <span class="attribute">#[<span class="ident">tokio</span>::<span class="ident">test</span>]</span>
+        <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy</span>::<span class="ident">unwrap_used</span>)]</span>
         <span class="kw">async</span> <span class="kw">fn</span> <span class="ident">member_named_nickname</span>() {
             <span class="kw">let</span> <span class="ident">guild</span> <span class="op">=</span> <span class="ident">gen</span>();
             <span class="kw">let</span> <span class="ident">lhs</span> <span class="op">=</span> <span class="ident">guild</span>.<span class="ident">member_named</span>(<span class="string">&quot;aaaa&quot;</span>).<span class="ident">unwrap</span>().<span class="ident">display_name</span>();
