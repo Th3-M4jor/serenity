@@ -949,11 +949,11 @@
                     }
                 }
 
-                <span class="kw">let</span> <span class="ident">entries</span> <span class="op">=</span> <span class="ident">audit_log_entries</span>.<span class="ident">ok_or_else</span>(
-                    <span class="op">|</span><span class="op">|</span> <span class="ident">de</span>::<span class="ident">Error</span>::<span class="ident">missing_field</span>(<span class="string">&quot;audit_log_entries&quot;</span>)
-                )<span class="question-mark">?</span>.<span class="ident">into_iter</span>().<span class="ident">map</span>(
-                    <span class="op">|</span><span class="ident">entry</span><span class="op">|</span> (<span class="ident">entry</span>.<span class="ident">id</span>, <span class="ident">entry</span>)
-                ).<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">HashMap</span><span class="op">&lt;</span><span class="ident">AuditLogEntryId</span>, <span class="ident">AuditLogEntry</span><span class="op">&gt;</span><span class="op">&gt;</span>();
+                <span class="kw">let</span> <span class="ident">entries</span> <span class="op">=</span> <span class="ident">audit_log_entries</span>
+                    .<span class="ident">ok_or_else</span>(<span class="op">|</span><span class="op">|</span> <span class="ident">de</span>::<span class="ident">Error</span>::<span class="ident">missing_field</span>(<span class="string">&quot;audit_log_entries&quot;</span>))<span class="question-mark">?</span>
+                    .<span class="ident">into_iter</span>()
+                    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">entry</span><span class="op">|</span> (<span class="ident">entry</span>.<span class="ident">id</span>, <span class="ident">entry</span>))
+                    .<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">HashMap</span><span class="op">&lt;</span><span class="ident">AuditLogEntryId</span>, <span class="ident">AuditLogEntry</span><span class="op">&gt;</span><span class="op">&gt;</span>();
 
                 <span class="kw">let</span> <span class="ident">webhooks</span> <span class="op">=</span> <span class="ident">webhooks</span>.<span class="ident">ok_or_else</span>(<span class="op">|</span><span class="op">|</span> <span class="ident">de</span>::<span class="ident">Error</span>::<span class="ident">missing_field</span>(<span class="string">&quot;webhooks&quot;</span>))<span class="question-mark">?</span>;
                 <span class="kw">let</span> <span class="ident">users</span> <span class="op">=</span> <span class="ident">users</span>.<span class="ident">ok_or_else</span>(<span class="op">|</span><span class="op">|</span> <span class="ident">de</span>::<span class="ident">Error</span>::<span class="ident">missing_field</span>(<span class="string">&quot;users&quot;</span>))<span class="question-mark">?</span>;

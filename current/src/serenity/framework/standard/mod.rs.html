@@ -878,6 +878,7 @@
 <span id="875">875</span>
 <span id="876">876</span>
 <span id="877">877</span>
+<span id="878">878</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">help_commands</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">macros</span> {
@@ -1580,7 +1581,8 @@
 
                         <span class="kw">for</span> <span class="ident">delim</span> <span class="kw">in</span> <span class="ident">command</span>.<span class="ident">options</span>.<span class="ident">delimiters</span> {
                             <span class="kw">if</span> <span class="ident">delim</span>.<span class="ident">len</span>() <span class="op">=</span><span class="op">=</span> <span class="number">1</span> {
-                                <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy</span>::<span class="ident">unwrap_used</span>)]</span> <span class="comment">// Should always be Some() in this case</span>
+                                <span class="comment">// Should always be Some() in this case</span>
+                                <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy</span>::<span class="ident">unwrap_used</span>)]</span>
                                 <span class="ident">v</span>.<span class="ident">push</span>(<span class="ident">Delimiter</span>::<span class="ident">Single</span>(<span class="ident">delim</span>.<span class="ident">chars</span>().<span class="ident">next</span>().<span class="ident">unwrap</span>()));
                             } <span class="kw">else</span> {
                                 <span class="comment">// This too.</span>
