@@ -2028,6 +2028,12 @@
 <span id="2025">2025</span>
 <span id="2026">2026</span>
 <span id="2027">2027</span>
+<span id="2028">2028</span>
+<span id="2029">2029</span>
+<span id="2030">2030</span>
+<span id="2031">2031</span>
+<span id="2032">2032</span>
+<span id="2033">2033</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="doccomment">//! All the events this library handles.</span>
 
@@ -2529,6 +2535,9 @@
                     <span class="ident">nick</span>: <span class="self">self</span>.<span class="ident">nick</span>.<span class="ident">clone</span>(),
                     <span class="ident">roles</span>: <span class="self">self</span>.<span class="ident">roles</span>.<span class="ident">clone</span>(),
                     <span class="ident">user</span>: <span class="self">self</span>.<span class="ident">user</span>.<span class="ident">clone</span>(),
+                    <span class="ident">pending</span>: <span class="bool-val">false</span>,
+                    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;unstable_discord_api&quot;</span>)]</span>
+                    <span class="ident">permissions</span>: <span class="prelude-val">None</span>,
                 });
             }
 
@@ -3026,6 +3035,9 @@
                             <span class="ident">nick</span>: <span class="prelude-val">None</span>,
                             <span class="ident">user</span>: <span class="ident">user</span>.<span class="ident">clone</span>(),
                             <span class="ident">roles</span>: <span class="macro">vec</span><span class="macro">!</span>[],
+                            <span class="ident">pending</span>: <span class="bool-val">false</span>,
+                            <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;unstable_discord_api&quot;</span>)]</span>
+                            <span class="ident">permissions</span>: <span class="prelude-val">None</span>,
                         });
                     }
                 }
